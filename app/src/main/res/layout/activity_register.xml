@@ -181,6 +181,6 @@
 
     <include
         android:id="@+id/container_loading"
-        layout="@layout/loading"/>
+        layout="@layout/view_loading"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

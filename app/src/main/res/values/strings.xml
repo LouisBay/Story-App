@@ -4,6 +4,7 @@
     <string name="dummy_description" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non orci non risus semper accumsan. Maecenas consectetur turpis quis vulputate eleifend. Integer sit amet iaculis nisi. Cras bibendum dignissim odio at faucibus. Donec vel nisi volutpat, venenatis lectus vitae, eleifend nisi. Nunc eu tellus quis turpis aliquet imperdiet in ut nisl. Sed viverra bibendum libero eget porttitor. Suspendisse lobortis metus turpis. Ut tincidunt nec lectus ac ultrices. Sed laoreet mauris eget tellus tincidunt congue. Aenean posuere orci id sagittis rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras pharetra, lacus id euismod sodales, metus felis facilisis ex, sed dictum mauris libero non ipsum. Vivamus auctor non arcu ut cursus.</string>
     <string name="list_story">List Story</string>
     <string name="fab_add">Floating Action Button Add</string>
+    <string name="fab_back">Floating Action Button Back</string>
     <string name="register_success">Register Success</string>
     <string name="login_success">Login Success</string>
     <string name="login_failure">Login Failed, please try again.</string>
@@ -44,4 +45,18 @@
     <string name="register_message">Please fill the form below to continue using this apps</string>
     <string name="empty_field">This field is rmpty</string>
     <string name="setting_language">Setting Language</string>
+    <string name="retry">Try Again</string>
+    <string name="empty">No Story With Location</string>
+    <string name="story_maps">Story Maps</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="story">Story</string>
+    <string name="location_not_found">Location is not found. Try Again</string>
+    <string name="share_my_location">Share My Location</string>
+    <string name="please_grant_permission">Allow location permission to use the feature</string>
+    <string name="please_active_location_service">Please activate your location service to use this feature</string>
+    <string name="empty_text">NO DATA</string>
+    <string name="appwidget_text" translatable="false">Widget Story</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="app_widget_description" translatable="false">This is an app widget description</string>
+    <string name="widget_touch_text" translatable="false">Story by: %s</string>
 </resources>

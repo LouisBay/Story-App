@@ -4,6 +4,7 @@
     <string name="list_story">Lista de historias</string>
     <string name="register_success">Registro exitoso</string>
     <string name="fab_add">Añadir botón</string>
+    <string name="fab_back">Botón Atrás</string>
     <string name="login_success">Inicio de sesión correcto</string>
     <string name="login_failure">Acceso fallido. Por favor intente nuevamente.</string>
     <string name="register_failure">Registro fallido, inténtalo de nuevo.</string>
@@ -43,4 +44,13 @@
     <string name="register_message">Por favor complete el siguiente formulario para continuar usando esta aplicación</string>
     <string name="empty_field">Esta sección aún está vacía.</string>
     <string name="setting_language">Configuración de idioma</string>
+    <string name="retry">Intentar otra vez</string>
+    <string name="story_maps">Mapas de historias</string>
+    <string name="story">Historia</string>
+    <string name="location_not_found">Ubicación no encontrada. Intentar otra vez.</string>
+    <string name="share_my_location">Compartir mi ubicación</string>
+    <string name="please_grant_permission">Permitir permiso de ubicación para usar la función</string>
+    <string name="please_active_location_service">Active su servicio de ubicación para usar esta función</string>
+    <string name="empty_text">SIN DATOS</string>
+    <string name="empty">Sin historia con ubicación</string>
 </resources>

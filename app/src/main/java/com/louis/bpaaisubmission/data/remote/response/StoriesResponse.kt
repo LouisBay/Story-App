@@ -18,6 +18,9 @@ data class StoriesResponse(
 @Parcelize
 data class StoryItem(
 
+    @field:SerializedName("id")
+    val id: String? = null,
+
     @field:SerializedName("photoUrl")
     val photoUrl: String? = null,
 
@@ -32,9 +35,6 @@ data class StoryItem(
 
     @field:SerializedName("lon")
     val lon: Double? = null,
-
-    @field:SerializedName("id")
-    val id: String? = null,
 
     @field:SerializedName("lat")
     val lat: Double? = null

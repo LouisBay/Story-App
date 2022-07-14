@@ -27,7 +27,10 @@ interface ApiService {
 
     @GET("stories")
     suspend fun getAllStories(
-        @Header("Authorization") token: String
+        @Header("Authorization") token: String,
+        @Query("page") page:Int? = null,
+        @Query("size") size:Int? = null,
+        @Query("location") location: Int? = null
     ) : StoriesResponse
 
     @Multipart
@@ -35,6 +38,8 @@ interface ApiService {
     suspend fun uploadNewStory(
         @Header("Authorization") token: String,
         @Part("description") description: RequestBody,
+        @Part("lat") lat: RequestBody? = null,
+        @Part("lon") lon: RequestBody? = null,
         @Part photo: MultipartBody.Part
     ) : UploadResponse
 }

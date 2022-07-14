@@ -2,9 +2,11 @@ package com.louis.bpaaisubmission.views
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.google.android.material.snackbar.Snackbar
@@ -37,15 +39,33 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showLoading(state: Boolean) {
-        binding.containerLoading.apply {
-            if(state) viewLoading.visibility = View.VISIBLE
-            else viewLoading.visibility = View.GONE
+        binding.apply {
+            if(state) {
+                containerLoading.viewLoading.visibility = View.VISIBLE
+                etlEmail.visibility = View.GONE
+                etlName.visibility = View.GONE
+                etlPassword.visibility = View.GONE
+                btnRegister.visibility = View.GONE
+                containerTextBottom.visibility = View.GONE
+
+            }
+            else {
+                containerLoading.viewLoading.visibility = View.GONE
+                etlEmail.visibility = View.VISIBLE
+                etlName.visibility = View.VISIBLE
+                etlPassword.visibility = View.VISIBLE
+                btnRegister.visibility = View.VISIBLE
+                containerTextBottom.visibility = View.VISIBLE
+            }
         }
     }
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.btn_register -> { startRegister() }
+            R.id.btn_register -> {
+                closeKeyboard()
+                startRegister()
+            }
 
             R.id.tv_login -> {
                 finish()
@@ -134,6 +154,13 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                 startDelay = 300
                 start()
             }
+        }
+    }
+
+    private fun closeKeyboard() {
+        this.currentFocus?.let { view ->
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+            imm?.hideSoftInputFromWindow(view.windowToken, 0)
         }
     }
 }

@@ -5,10 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.louis.bpaaisubmission.data.Repository
 import com.louis.bpaaisubmission.di.Injection
-import com.louis.bpaaisubmission.viewmodels.AddStoryViewModel
-import com.louis.bpaaisubmission.viewmodels.LoginViewModel
-import com.louis.bpaaisubmission.viewmodels.MainViewModel
-import com.louis.bpaaisubmission.viewmodels.RegisterViewModel
+import com.louis.bpaaisubmission.viewmodels.*
 import java.lang.IllegalArgumentException
 
 class ViewModelFactory private constructor(private val repository: Repository) : ViewModelProvider.NewInstanceFactory() {
@@ -23,6 +20,8 @@ class ViewModelFactory private constructor(private val repository: Repository) :
             modelClass.isAssignableFrom(AddStoryViewModel::class.java) -> { AddStoryViewModel(repository) as T }
 
             modelClass.isAssignableFrom(RegisterViewModel::class.java) -> { RegisterViewModel(repository) as T }
+
+            modelClass.isAssignableFrom(MapsViewModel::class.java) -> { MapsViewModel(repository) as T }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

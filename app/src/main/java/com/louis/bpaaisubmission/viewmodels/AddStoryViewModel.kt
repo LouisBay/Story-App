@@ -16,10 +16,10 @@ class AddStoryViewModel(private val repository: Repository) : ViewModel() {
 
     fun getSession() = repository.UserPrefRepository().getSession().asLiveData()
 
-    fun uploadNewStory(token: String, description: RequestBody, photo: MultipartBody.Part) {
+    fun uploadNewStory(token: String, description: RequestBody, lat: RequestBody?, lon:RequestBody?, photo: MultipartBody.Part) {
         viewModelScope.launch {
             _result.value = Result.Loading
-            repository.StoryRepository().uploadNewStory(token, description, photo).collect {
+            repository.StoryRepository().uploadNewStory(token, description, lat, lon, photo).collect {
                 _result.value = it
             }
         }

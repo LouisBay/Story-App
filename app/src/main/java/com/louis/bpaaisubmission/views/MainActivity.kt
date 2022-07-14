@@ -8,14 +8,14 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
+import androidx.paging.PagingData
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import com.louis.bpaaisubmission.R
 import com.louis.bpaaisubmission.adapter.ListStoryAdapter
-import com.louis.bpaaisubmission.data.remote.response.StoryItem
+import com.louis.bpaaisubmission.adapter.LoadingStateAdapter
+import com.louis.bpaaisubmission.data.local.entity.StoryEntity
 import com.louis.bpaaisubmission.databinding.ActivityMainBinding
 import com.louis.bpaaisubmission.utils.Helper.toBearerToken
-import com.louis.bpaaisubmission.utils.Result
 import com.louis.bpaaisubmission.utils.ViewModelFactory
 import com.louis.bpaaisubmission.viewmodels.MainViewModel
 
@@ -40,29 +40,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.fabAdd.setOnClickListener(this)
     }
 
-    private fun scrollToTop() {
-        binding.rvStories.apply {
-            layoutManager?.smoothScrollToPosition(this, null, 0)
-        }
-    }
-
     private fun setRecyclerView() {
         listStoryAdapter = ListStoryAdapter()
 
         binding.rvStories.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = listStoryAdapter
+            adapter = listStoryAdapter.withLoadStateFooter(
+                footer = LoadingStateAdapter {
+                    listStoryAdapter.retry()
+                }
+            )
         }
 
         binding.swipeRefresh.setOnRefreshListener {
             refreshStories()
-            scrollToTop()
         }
 
         refreshStories()
     }
 
     private fun refreshStories(){
+        binding.swipeRefresh.isRefreshing = true
         mainViewModel.apply {
             getSession().observe(this@MainActivity) { session ->
                 getAllStories(session.token.toBearerToken()).observe(this@MainActivity) { result ->
@@ -72,31 +70,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun showResult(result: Result<ArrayList<StoryItem>>?) {
-        binding.swipeRefresh.isRefreshing = true
-        when (result) {
-            is Result.Loading -> {
-                binding.swipeRefresh.isRefreshing = true
-            }
-
-            is Result.Success -> {
-                listStoryAdapter.submitList(result.data)
-                binding.swipeRefresh.isRefreshing = false
-            }
-
-            is Result.Error -> {
-                Snackbar.make(
-                    binding.root,
-                    resources.getString(R.string.error, result.errorMessage),
-                    Snackbar.LENGTH_SHORT
-                ).show()
-
-
-                binding.swipeRefresh.isRefreshing = false
-
-            }
-            else -> {}
-        }
+    private fun showResult(result: PagingData<StoryEntity>) {
+        listStoryAdapter.submitData(lifecycle, result)
+        binding.swipeRefresh.isRefreshing = false
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -106,6 +82,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            R.id.story_maps -> {
+                Intent(this@MainActivity, MapsActivity::class.java).also {
+                    startActivity(it)
+                }
+                true
+            }
             R.id.logout -> {
                 mainViewModel.deleteSession()
                 Intent(this@MainActivity, LoginActivity::class.java).also {

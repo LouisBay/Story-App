@@ -9,7 +9,7 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.louis.bpaaisubmission.R
-import com.louis.bpaaisubmission.data.remote.response.StoryItem
+import com.louis.bpaaisubmission.data.local.entity.StoryEntity
 import com.louis.bpaaisubmission.databinding.ActivityDetailStoryBinding
 import com.louis.bpaaisubmission.utils.Helper.withDateFormat
 
@@ -33,7 +33,7 @@ class DetailStoryActivity : AppCompatActivity() {
     }
 
     private fun parseStoryDetail() {
-        val data = intent.getParcelableExtra<StoryItem>(EXTRA_DETAIL)
+        val data = intent.getParcelableExtra<StoryEntity>(EXTRA_DETAIL)
 
         binding.apply {
             tvDate.text = resources.getString(R.string.uploaded_on, data?.createdAt?.withDateFormat())

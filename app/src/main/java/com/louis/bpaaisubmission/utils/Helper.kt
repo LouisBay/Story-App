@@ -3,6 +3,8 @@ package com.louis.bpaaisubmission.utils
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.louis.bpaaisubmission.R
+import com.louis.bpaaisubmission.data.local.entity.StoryEntity
+import com.louis.bpaaisubmission.data.remote.response.StoryItem
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -25,4 +27,15 @@ object Helper {
         return DateFormat.getDateInstance(DateFormat.FULL).format(date)
     }
 
+    fun StoryItem.toEntityModel(): StoryEntity {
+        return StoryEntity(
+            this.id.toString(),
+            this.name.toString(),
+            this.description.toString(),
+            this.lon,
+            this.lat,
+            this.photoUrl.toString(),
+            this.createdAt.toString()
+        )
+    }
 }

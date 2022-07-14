@@ -3,6 +3,7 @@
     <string name="app_name">BPAAI Submission</string>
     <string name="list_story">Daftar Cerita</string>
     <string name="fab_add">Tombol Tambah</string>
+    <string name="fab_back">Tombol Kembali</string>
     <string name="register_success">Registrasi Berhasil</string>
     <string name="login_success">Login Berhasil</string>
     <string name="login_failure">Login Gagal, silahkan mencoba kembali.</string>
@@ -43,4 +44,13 @@
     <string name="empty_field">Bagian ini masih kosong</string>
     <string name="setting_language">Pengaturan Bahasa</string>
     <string name="email">Email</string>
+    <string name="retry">Coba Lagi</string>
+    <string name="story_maps">Peta Cerita</string>
+    <string name="story">Cerita</string>
+    <string name="location_not_found">Location tidak ditemukan. Coba Lagi.</string>
+    <string name="share_my_location">Bagikan Lokasi Saya</string>
+    <string name="please_grant_permission">Izinkan akses lokasi untuk menggunakan fitur tersebut</string>
+    <string name="please_active_location_service">Aktifkan GPS untuk menggunakan fitur ini</string>
+    <string name="empty_text">TIDAK ADA DATA</string>
+    <string name="empty">Tidak ada Story dengan Lokasi</string>
 </resources>

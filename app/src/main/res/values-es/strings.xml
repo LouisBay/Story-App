@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BPAAI Submission</string>
+    <string name="list_story">Lista de historias</string>
+    <string name="register_success">Registro exitoso</string>
+    <string name="fab_add">Añadir botón</string>
+    <string name="login_success">Inicio de sesión correcto</string>
+    <string name="login_failure">Acceso fallido. Por favor intente nuevamente.</string>
+    <string name="register_failure">Registro fallido, inténtalo de nuevo.</string>
+    <string name="logout">Salir</string>
+    <string name="insert_email">Ingrese correo electrónico</string>
+    <string name="insert_password">Introducir la contraseña</string>
+    <string name="insert_name">Ingrese su nombre</string>
+    <string name="invalid_password">La contraseña debe contener al menos 6 caracteres</string>
+    <string name="invalid_email">Email inválido</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Clave</string>
+    <string name="login">Ingresar</string>
+    <string name="welcome">¡Bienvenido a Dicoding Story!</string>
+    <string name="welcome_message">Inicie sesión para comenzar a compartir su historia y explorar las experiencias de aprendizaje de otros estudiantes.</string>
+    <string name="dont_have_account">¿No tienes una cuenta?</string>
+    <string name="have_account">¿Ya tienes una cuenta?</string>
+    <string name="register">Lista</string>
+    <string name="dicodings_logo">Historia de codificación de logotipos</string>
+    <string name="please_wait">Espere por favor</string>
+    <string name="story_picture">Imágenes de la historia</string>
+    <string name="name">Nombre</string>
+    <string name="description">Descripción</string>
+    <string name="error">Ocurrió un error: %s</string>
+    <string name="uploaded_on">Subido el: %s</string>
+    <string name="detail_title">Detalles de la historia</string>
+    <string name="default_profile_picture">Imagen de perfil predeterminada</string>
+    <string name="add_story">Agregar historia</string>
+    <string name="write_description">Escribir descripción</string>
+    <string name="select_picture">Seleccionar imagen</string>
+    <string name="upload_story">Subir historia</string>
+    <string name="gallery">Galería</string>
+    <string name="camera">Cámara</string>
+    <string name="please_fill_description">Por favor complete la descripción primero</string>
+    <string name="please_select_image">Por favor seleccione una imagen primero</string>
+    <string name="new_story_uploaded">Historia cargada con éxito</string>
+    <string name="create_an_account">Crear una nueva cuenta</string>
+    <string name="register_message">Por favor complete el siguiente formulario para continuar usando esta aplicación</string>
+    <string name="empty_field">Esta sección aún está vacía.</string>
+    <string name="setting_language">Configuración de idioma</string>
+</resources>

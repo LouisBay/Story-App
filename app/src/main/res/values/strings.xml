@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">BPAAI Submission</string>
+    <string name="dummy_date" translatable="false">Monday, 11 April 2022</string>
+    <string name="dummy_description" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non orci non risus semper accumsan. Maecenas consectetur turpis quis vulputate eleifend. Integer sit amet iaculis nisi. Cras bibendum dignissim odio at faucibus. Donec vel nisi volutpat, venenatis lectus vitae, eleifend nisi. Nunc eu tellus quis turpis aliquet imperdiet in ut nisl. Sed viverra bibendum libero eget porttitor. Suspendisse lobortis metus turpis. Ut tincidunt nec lectus ac ultrices. Sed laoreet mauris eget tellus tincidunt congue. Aenean posuere orci id sagittis rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras pharetra, lacus id euismod sodales, metus felis facilisis ex, sed dictum mauris libero non ipsum. Vivamus auctor non arcu ut cursus.</string>
+    <string name="list_story">List Story</string>
+    <string name="fab_add">Floating Action Button Add</string>
+    <string name="register_success">Register Success</string>
+    <string name="login_success">Login Success</string>
+    <string name="login_failure">Login Failed, please try again.</string>
+    <string name="register_failure">Register Failed, please try again.</string>
+    <string name="logout">Logout</string>
+    <string name="insert_email">Insert Email</string>
+    <string name="insert_password">Insert Password</string>
+    <string name="insert_name">Insert Name</string>
+    <string name="invalid_password">Password must be at least 6 characters long</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome to Dicoding Story!</string>
+    <string name="welcome_message">Login to share your story and explore student\'s learning experience on this apps!</string>
+    <string name="dont_have_account">Don\'t have account?</string>
+    <string name="have_account">Already have account?</string>
+    <string name="register">Register</string>
+    <string name="dicodings_logo">Dicoding\'s Logo</string>
+    <string name="please_wait">Please wait</string>
+    <string name="story_picture">Story Picture</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="error">An Error Occurred : %s</string>
+    <string name="uploaded_on">Uploaded on : %s</string>
+    <string name="detail_title">Detail Story</string>
+    <string name="default_profile_picture">Default Profile Picture</string>
+    <string name="add_story">Add Story</string>
+    <string name="write_description">Write Description</string>
+    <string name="select_picture">Select Picture</string>
+    <string name="upload_story">Upload Story</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="please_fill_description">Please fill the description first</string>
+    <string name="please_select_image">Please select an image first</string>
+    <string name="new_story_uploaded">New Story Uploaded</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="register_message">Please fill the form below to continue using this apps</string>
+    <string name="empty_field">This field is rmpty</string>
+    <string name="setting_language">Setting Language</string>
+</resources>
